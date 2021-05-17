@@ -5,6 +5,11 @@
   left: 50%;
   top: 50%;
 
+  width: 100vw;
+  height: 100vh;
+  max-width: 450px;
+  max-height: 610px;
+
   overflow-y: scroll;
   transform: translate(-50%, -50%) scale(1);
 
@@ -15,12 +20,12 @@
     transform: translate(-50%, -50%) scale(0.4);
   }
 
-  @media screen and (min-width: 480px) {
-    width: 95vw;
-    height: 95vh;
-    max-width: 450px;
-    max-height: 610px;
-  }
+  // @media screen and (min-width: 480px) {
+  //   width: 100vw;
+  //   height: 100vh;
+  //   max-width: 450px;
+  //   max-height: 610px;
+  // }
 
   @media screen and (min-width: 1200px) {
     max-width: 528px;
@@ -121,7 +126,7 @@
 .form-checkbox {
   &__agree {
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     vertical-align: middle;
     padding-left: 24px;
@@ -142,6 +147,9 @@
     }
     .form-checkbox__input:focus + & {
       border-color: $accent-blue-color;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
     }
   }
   &__wrapper {

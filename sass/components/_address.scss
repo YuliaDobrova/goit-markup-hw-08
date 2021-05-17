@@ -41,7 +41,14 @@
   letter-spacing: 0.02em;
   color: $accent-blue-color;
   text-decoration: none;
+  &:hover .contacts__icon-smartphone,
+  &:focus .contacts__icon-smartphone {
+    fill: $accent-blue-color;
+  }
 
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
     font-size: 12px;
@@ -76,6 +83,10 @@
   letter-spacing: 0.02em;
   color: $primary-text-color;
   text-decoration: none;
+  &:hover .contacts__icon-envelope,
+  &:focus .contacts__icon-envelope {
+    fill: $accent-blue-color;
+  }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 10px;
@@ -103,6 +114,10 @@
   width: 16px;
   margin-right: 8px;
   fill: $main-icon-color;
+  &:hover,
+  &:focus {
+    fill: $accent-blue-color;
+  }
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -114,6 +129,10 @@
   width: 10px;
   margin-right: 8px;
   fill: $main-icon-color;
+  &:hover,
+  &:focus {
+    fill: $accent-blue-color;
+  }
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -127,6 +146,7 @@
 
 .social-menu {
   display: flex;
+  flex-wrap: wrap;
   margin-top: auto;
 
   @media screen and (min-width: 768px) {

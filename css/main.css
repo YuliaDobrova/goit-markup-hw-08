@@ -125,6 +125,12 @@ img {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .navigation {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     display: flex;
@@ -234,6 +240,17 @@ img {
   text-decoration: none;
 }
 
+.contacts__link-tel:hover .contacts__icon-smartphone,
+.contacts__link-tel:focus .contacts__icon-smartphone {
+  fill: #2196f3;
+}
+
+@media screen and (max-width: 480px) {
+  .contacts__link-tel {
+    font-size: 20px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contacts__link-tel {
     margin-bottom: 0;
@@ -268,6 +285,11 @@ img {
   text-decoration: none;
 }
 
+.contacts__link-email:hover .contacts__icon-envelope,
+.contacts__link-email:focus .contacts__icon-envelope {
+  fill: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
   .contacts__link-email {
     margin-bottom: 10px;
@@ -295,6 +317,10 @@ img {
   fill: #afb1b8;
 }
 
+.contacts__icon-envelope:hover, .contacts__icon-envelope:focus {
+  fill: #2196f3;
+}
+
 @media screen and (max-width: 767px) {
   .contacts__icon-envelope {
     display: none;
@@ -306,6 +332,10 @@ img {
   width: 10px;
   margin-right: 8px;
   fill: #afb1b8;
+}
+
+.contacts__icon-smartphone:hover, .contacts__icon-smartphone:focus {
+  fill: #2196f3;
 }
 
 @media screen and (max-width: 767px) {
@@ -322,6 +352,7 @@ img {
 
 .social-menu {
   display: flex;
+  flex-wrap: wrap;
   margin-top: auto;
 }
 
@@ -431,6 +462,10 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 100vw;
+  height: 100vh;
+  max-width: 450px;
+  max-height: 610px;
   overflow-y: scroll;
   transform: translate(-50%, -50%) scale(1);
   padding: 40px;
@@ -440,15 +475,6 @@ img {
 
 .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.4);
-}
-
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 95vw;
-    height: 95vh;
-    max-width: 450px;
-    max-height: 610px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -559,7 +585,7 @@ img {
 
 .form-checkbox__agree {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   vertical-align: middle;
   padding-left: 24px;
@@ -584,6 +610,12 @@ img {
 
 .form-checkbox__input:focus + .form-checkbox__agree {
   border-color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-checkbox__agree {
+    font-size: 14px;
+  }
 }
 
 .form-checkbox__wrapper {
@@ -1138,6 +1170,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
+  overflow-y: scroll;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
