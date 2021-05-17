@@ -1,0 +1,52 @@
+/* === CLIENTS === */
+.clients {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 90px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+      flex-basis: calc((100% - 180px) / 6);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    box-sizing: border-box;
+    border: 1px solid $main-icon-color;
+
+    border-radius: 4px;
+    &:hover,
+    &:focus {
+      border-color: $accent-blue-color;
+      fill: $accent-blue-color;
+    }
+  }
+  &__icon {
+    fill: $main-icon-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .clients__link:hover &,
+    .clients__link:focus & {
+      border-color: $accent-blue-color;
+      fill: $accent-blue-color;
+    }
+  }
+}
+/* === END CLIENTS === */
