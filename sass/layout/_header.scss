@@ -52,9 +52,6 @@
     display: flex;
   }
 }
-// &__address {
-//   margin-left: auto;
-// }
 
 .menu-button {
   display: inline-flex;
@@ -65,6 +62,14 @@
   padding-top: 10px;
   padding-bottom: 10px;
   z-index: 3;
+  &:hover .menu-button__icon-menu,
+  &:focus .menu-button__icon-menu {
+    fill: $accent-blue-color;
+  }
+  &:hover .menu-button__icon-cross,
+  &:focus .menu-button__icon-cross {
+    fill: $accent-blue-color;
+  }
 
   & .menu-button__icon-cross {
     display: none;
@@ -82,5 +87,4 @@
     display: none;
   }
 }
-
 /* === END HEADER === */

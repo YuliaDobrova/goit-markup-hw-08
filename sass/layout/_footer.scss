@@ -23,20 +23,11 @@
     @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-around;
-      // flex-basis: calc((50% - 45px) / 2);
     }
-
-    // @media screen and (min-width: 1200px) {
-    //   margin-bottom: 0;
-    //   flex-direction: row;
-    //   width: calc((100% - 30px) / 2);
-    //   align-items: baseline;
-    // }
   }
 
   /*=== INFO ===*/
   &__wrapper-info {
-    // flex-basis: calc((50% - 45px) / 2);
     margin-bottom: 60px;
   }
   &__logo {
@@ -131,30 +122,22 @@
 }
 
 .footer-form {
-  &__wrapper {
-    @media screen and (min-width: 1200px) {
-      display: block;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      width: calc(100% - 39%);
-      @media screen and (min-width: 1200px) {
-        // display: flex;
-        // flex-wrap: nowrap;
-        // display: inline;
-        // width: calc((100% - 30px) / 2);
-        // margin-left: 30px;
-        // margin-right: 0;
-      }
-    }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 39%);
+  }
+
   &__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -164,6 +147,9 @@
     background-color: $footer-bg-color;
     margin-right: 12px;
     color: #ffffff;
+    @media screen and (min-width: 480px) {
+      width: 358px;
+    }
     @media screen and (max-width: 1199px) {
       margin-bottom: 20px;
     }
@@ -192,5 +178,4 @@
     right: 28px;
   }
 }
-
 /* === END FOOTER  === */
